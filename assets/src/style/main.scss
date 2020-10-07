@@ -43,6 +43,10 @@
     position: absolute;
     height: 144%;
 
+    @media (min-width: $screen-xxl) {
+      background-position: 100% -220px;
+    }
+
     @media (max-width: $screen-md) {
       display: none;
     }

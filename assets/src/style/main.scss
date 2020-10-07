@@ -33,15 +33,19 @@
 
 .header {
   height: 100vh;
-  background: url("../img/designer.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 100% center;
 
-  @media (max-width: $screen-md) {
-    background: none;
-  }
-  &__container {
+  &__background {
+    background: url("../img/designer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% -140px;
+    width: 100%;
+    position: absolute;
+    height: 144%;
+
+    @media (max-width: $screen-md) {
+      display: none;
+    }
   }
 
   &__topbar {
@@ -103,7 +107,6 @@
   }
 
   &__intro {
-    //   height: calc(100vh - 44px);
     height: 100vh;
     position: absolute;
     width: 50%;
@@ -162,10 +165,14 @@
 }
 
 .features {
-  padding-top: 110px;
+  padding-top: 300px;
+
+  @media (max-width: $screen-xl) {
+    padding-top: 180px;
+  }
 
   @media (max-width: $screen-lg) {
-    padding-top: 60px;
+    padding-top: 120px;
   }
 
   @media (max-width: $screen-md) {
@@ -345,9 +352,6 @@
     padding: 1px 41px;
   }
 
-  span {
-  }
-
   &__price {
     font-size: 50px;
     line-height: 66px;
@@ -364,6 +368,7 @@
     font-size: $font-less;
     line-height: $line-less;
     color: $color-gray;
+    font-weight: 400;
     margin-top: 60px;
     margin-bottom: 9px;
 
@@ -376,9 +381,6 @@
 .footer {
   background: #e7ecff;
 
-  &__container {
-  }
-
   &__top {
     display: flex;
     align-items: center;
@@ -388,9 +390,9 @@
     margin-bottom: 40px;
 
     @media (max-width: $screen-md) {
-        margin-top: 55px;
-        margin-bottom: 20px;
-      }
+      margin-top: 55px;
+      margin-bottom: 20px;
+    }
   }
 
   &__copyright {
@@ -416,8 +418,8 @@
     }
 
     @media (max-width: $screen-sm) {
-        top: -45px;
-      }
+      top: -45px;
+    }
   }
 
   &__cta {
@@ -437,8 +439,8 @@
     border-top: 1px solid #cdd1d4;
 
     @media (max-width: $screen-md) {
-        padding-bottom: 15px;
-      }
+      padding-bottom: 15px;
+    }
   }
 
   &__menu {

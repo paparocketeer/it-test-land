@@ -1,8 +1,8 @@
-Slick slider test app
+IT TEST test app
 
-[Demo](https://slick-test.netlify.app/)
+[Demo](https://it-test-land.netlify.app/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4b2a80b0-b164-4c4a-9c10-84a194c2120c/deploy-status)](https://app.netlify.com/sites/slick-test/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/907cecbd-7784-4108-9c25-f8da1f83346c/deploy-status)](https://app.netlify.com/sites/it-test-land/deploys)
 
 ## Требования к окружению
 Для создания окружения необходимо иметь следующие установленные инструменты:

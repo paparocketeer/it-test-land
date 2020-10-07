@@ -169,7 +169,11 @@
 }
 
 .features {
-  padding-top: 300px;
+  padding-top: 260px;
+
+  @media (min-width: $screen-xxl) {
+    padding-top: 300px;
+  }
 
   @media (max-width: $screen-xl) {
     padding-top: 180px;

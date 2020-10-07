@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
+
+html,
+body {
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: $color-blue;
+  font-size: $font;
+  line-height: $line;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+a {
+  color: $color-blue;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.3s ease;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $blue;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  color: $color-main;
+}
+
+p {
+  color: $color-base;
+  font-size: $font;
+  line-height: $line;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+
+  @media (max-width: $screen-md) {
+    font-size: $font-less;
+    line-height: $line-less;
+  }
+}
+
+span {
+  color: $bg-blue;
+  font-size: $font;
+  line-height: $line;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  padding: 4px 55px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+
+  @media (max-width: $screen-md) {
+    padding: 4px 35px;
+    }
+
+  &--flat {
+    color: #fff;
+    background-color: $blue;
+    border: 2px solid transparent;
+
+    &:hover {
+      color: $color-main;
+      background-color: transparent;
+      border: 2px solid $color-main;
+    }
+  }
+
+  &--outline {
+    color: $color-main;
+    background-color: transparent;
+    border: 2px solid $color-main;
+
+    &:hover {
+      color: #fff;
+      background-color: $blue;
+      border: 2px solid transparent;
+    }
+  }
+}
+
+h1 {
+  font-size: $font-xl;
+  line-height: $line-xl;
+
+  @media (max-width: $screen-md) {
+    font-size: $font-md;
+    line-height: $line-md;
+  }
+}
+
+h2 {
+  font-size: $font-md;
+  line-height: $line-md;
+
+  @media (max-width: $screen-md) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+h3 {
+  font-size: $font;
+  line-height: $line;
+}

@@ -1,0 +1,479 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+@import "variables.scss";
+@import "normalize.scss";
+@import "base.scss";
+
+.container {
+  width: 1110px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $screen-xl) {
+    width: $container-xl;
+  }
+
+  @media (max-width: $screen-lg) {
+    width: $container-lg;
+  }
+
+  @media (max-width: $screen-md) {
+    width: $container-md;
+  }
+
+  @media (max-width: $screen-sm) {
+    width: $container-sm;
+  }
+}
+
+.header {
+  height: 100vh;
+  background: url("../img/designer.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100% center;
+
+  @media (max-width: $screen-md) {
+    background: none;
+  }
+  &__container {
+  }
+
+  &__topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 18px;
+
+    @media (max-width: $screen-sm) {
+      margin-top: 50px;
+    }
+  }
+
+  &__menu {
+    z-index: 2;
+
+    a {
+      font-size: $font-less;
+      line-height: $line-less;
+      font-weight: 400;
+      margin-right: 60px;
+
+      @media (max-width: $screen-lg) {
+        margin-right: 30px;
+      }
+
+      @media (max-width: $screen-md) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    a {
+      font-size: 26px;
+      line-height: 38px;
+      color: $bg-blue;
+      font-weight: 900;
+    }
+
+    @media (max-width: $screen-sm) {
+      top: -40px;
+    }
+  }
+
+  &__cta {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    z-index: 2;
+  }
+
+  &__intro {
+    //   height: calc(100vh - 44px);
+    height: 100vh;
+    position: absolute;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: $screen-lg) {
+      width: 70%;
+    }
+
+    @media (max-width: $screen-md) {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    p {
+      color: $color-base;
+      font-size: $font-sm;
+      line-height: $line-sm;
+      font-weight: 400;
+
+      @media (max-width: $screen-md) {
+        font-size: $font;
+        line-height: $line;
+      }
+    }
+  }
+
+  &__btngroup {
+    margin-top: 60px;
+    display: flex;
+
+    @media (max-width: $screen-md) {
+      font-size: $font-less;
+      line-height: $line-less;
+    }
+
+    @media (max-width: $screen-sm) {
+      margin-top: 15px;
+    }
+
+    .btn:first-child {
+      margin-right: 30px;
+    }
+
+    .btn {
+      padding: 6px 38px;
+
+      @media (max-width: $screen-sm) {
+        padding: 4px 25px;
+      }
+    }
+  }
+}
+
+.features {
+  padding-top: 110px;
+
+  @media (max-width: $screen-lg) {
+    padding-top: 60px;
+  }
+
+  @media (max-width: $screen-md) {
+    padding-top: 0;
+    margin-top: -20px;
+  }
+
+  &__container {
+    flex-direction: row;
+    align-items: center;
+
+    @media (max-width: $screen-md) {
+      flex-direction: column-reverse;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__col {
+    width: 50%;
+
+    @media (max-width: $screen-md) {
+      width: 70%;
+    }
+
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    @media (max-width: $screen-md) {
+      padding-top: 20px;
+    }
+  }
+
+  &__group {
+    margin-top: 80px;
+    display: flex;
+
+    @media (max-width: $screen-md) {
+      margin-top: 20px;
+    }
+  }
+
+  &__item {
+    &:first-child {
+      margin-right: 26px;
+    }
+
+    h3 {
+      margin-top: 6px;
+    }
+
+    p {
+      color: $color-gray;
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 6px;
+    }
+  }
+}
+
+.common {
+  &--mail {
+    padding-top: 123px;
+    padding-bottom: 123px;
+  }
+  &--pda {
+    padding-top: 92px;
+    padding-bottom: 92px;
+  }
+  &--organic {
+    padding-top: 117px;
+    padding-bottom: 117px;
+  }
+
+  @media (max-width: $screen-lg) {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  @media (max-width: $screen-md) {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  &__container {
+    flex-direction: row;
+    align-items: center;
+
+    @media (max-width: $screen-md) {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    width: 50%;
+
+    @media (max-width: $screen-md) {
+      width: 70%;
+    }
+
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
+
+    h2 {
+      @media (max-width: $screen-md) {
+        margin-top: 20px;
+      }
+    }
+
+    p {
+      margin-bottom: 40px;
+
+      @media (max-width: $screen-md) {
+        margin-bottom: 20px;
+      }
+    }
+    .btn {
+      padding: 5px 21px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: $screen-lg) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+.pricing {
+  padding-top: 235px;
+  padding-bottom: 165px;
+  background: url("../img/footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  @media (max-width: $screen-xl) {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: $screen-lg) {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  @media (max-width: $screen-md) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: -50px;
+  }
+
+  &__container {
+    align-items: center;
+  }
+
+  p {
+    width: 600px;
+    text-align: center;
+
+    @media (max-width: $screen-md) {
+      width: 100%;
+    }
+  }
+
+  .btn {
+    padding: 1px 41px;
+  }
+
+  span {
+  }
+
+  &__price {
+    font-size: 50px;
+    line-height: 66px;
+    margin-top: 35px;
+    color: #222f65;
+
+    @media (max-width: $screen-md) {
+      font-size: 38px;
+      line-height: 52px;
+    }
+  }
+
+  &__cta {
+    font-size: $font-less;
+    line-height: $line-less;
+    color: $color-gray;
+    margin-top: 60px;
+    margin-bottom: 9px;
+
+    @media (max-width: $screen-lg) {
+      margin-top: 40px;
+    }
+  }
+}
+
+.footer {
+  background: #e7ecff;
+
+  &__container {
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 40px;
+
+    @media (max-width: $screen-md) {
+        margin-top: 55px;
+        margin-bottom: 20px;
+      }
+  }
+
+  &__copyright {
+    font-size: $font-less;
+    line-height: $line-less;
+    color: $color-lgray;
+    z-index: 2;
+  }
+
+  &__logo {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    a {
+      font-size: 26px;
+      line-height: 38px;
+      color: $bg-blue;
+      font-weight: 900;
+    }
+
+    @media (max-width: $screen-sm) {
+        top: -45px;
+      }
+  }
+
+  &__cta {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    z-index: 2;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 32px;
+    border-top: 1px solid #cdd1d4;
+
+    @media (max-width: $screen-md) {
+        padding-bottom: 15px;
+      }
+  }
+
+  &__menu {
+    a {
+      font-size: $font-less;
+      line-height: $line-less;
+      color: $color-footer;
+      font-weight: 400;
+      margin-right: 60px;
+      &:hover {
+        color: $blue;
+      }
+
+      @media (max-width: $screen-lg) {
+        margin-right: 30px;
+      }
+
+      @media (max-width: $screen-md) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__social {
+    margin-left: 30px;
+
+    @media (max-width: $screen-lg) {
+      margin-left: 15px;
+    }
+
+    &:hover {
+      path {
+        fill: $blue;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
